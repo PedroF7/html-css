@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmas" value="M"> <label for="ismax">Masculino</label> <br>
+            <input type="radio" name="sexo" id="isxfem" checked value="F"> <label for="isxfem">Feminino</label> <br>
+        </fieldset>
+
+        <!--Usa-se o input radio para selecionar bolinhas de um formulário, para fazer com que possa-se marcar só uma,é necessário colocar o mesmo nome.
+        checked = Assim que a página for acessada o input radio ja vai estar marcado
+        Value = Mostrar o valor da caixa e o sentido dela-->
+
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol</label> <br>
+            <input type="checkbox" name="ebas" id="iesbas"> <label for="iesbas">Basquete</label> <br>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> <br>
+            <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label> <br>
+
+            <!--Utilizar o checkbox e colocar os names adequados com o label, e o label vem logo após do input e no tema da checkbox, e para colocar um em baixo do outro, utilizar o <br>-->
+        </fieldset>
+
+        <!--Diferenças entre checkbox e radio:
+            radio só pode marcar uma
+            checkbox pode marcar várias-->
+
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
