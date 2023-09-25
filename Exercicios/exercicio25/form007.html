@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest"> <!--Select: tag que mostra uma seleção de palavras dentro dela-->
+                <option value="" selected>ESCOLHA UM DOS ESTADOS</option>
+                <optgroup label="Região Sudeste"> <!--optgroup: Agrupamento de opções--> <!--label-optgroup: atributo com a função de dar um título para o agrupamento de opções-->
+                    <option value="SP" selected>São Paulo</option>
+                    <option value="MG">Minas gerais</option>
+                    <option value="RJ">Rio de Janeiro</option> <!--Options: termos que aparecem nas opções 
+                        selected: A caixa ficará marcada assim que que a página for--->
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio grande do Norte</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" list="lstprof"> <!--List: Atributo que faz com que apareça a lista dos termos no input-->
+            <datalist id="lstprof"> <!--Datalist: Especifica uma lista de opções do <input> -->
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist> <!--Dtalist X Optogroup: A diferença dos 2 é que o datalist consegue fazer com que o visitante digite o texto e que o mesmo fique o salvo na caixa do prórpio navegador-->
+        </p>
+        <p>
+            <label for="imsg">Mensagem</label> <br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea> <!--textarea: Caixa de texto em que pode-se ampliar o tamanho da caixa e nele é obrigatório o uso do post-->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
+
+<select name="estado" id="iest">
+<optgroup label="Região Sudeste">
+<option value="SP" selected>São Paulo</option>
+
+<!--Select: tag que mostra uma seleção de palavras dentro dela-->
+<!--optgroup: Agrupamento de opções--> 
+<!--label-optgroup: atributo com a função de dar um título para o agrupamento de opções-->
+<!--Options: termos que aparecem nas opções 
+selected: A caixa ficará marcada assim que que a página for acessada--->
+
+<input type="text" name="prof" id="iprof" list="lstprof">
+<datalist id="lstprof">
+    <option value="ADM">Administrador</option>
+</datalist>
+<!--List: Atributo que faz com que apareça a lista dos termos no input-->
+<!--Datalist: Especifica uma lista de opções do <input> -->
+
+<textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+<!--textarea: Caixa de texto em que pode-se ampliar o tamanho da caixa e nele é obrigatório o uso do post-->
