@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+
+    <form action="cadastro.php" method="get">
+        
+        <p>
+            <label for="iano">Em que ano você nasceu?</label>
+            <input type="number" name="n1" id="iano" oninput="calcidade()" min="1940" max="2023" required> <br>
+            <output id="isoma">0</output> <br>
+        </p>
+
+        <p>
+            <label for="iidade">Sua idade é:</label>
+            <output id="iidade">0</output>
+        </p>
+        
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <script>
+        function calcidade(){
+            var atual = new Date().getFullYear()
+            var iidade = window.document.getElementById('iidade')
+            var iano = window.document.getElementById('iano')
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
+</body>
+</html>
