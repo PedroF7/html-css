@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> <!--1° Passo: acessar o google fonts e colar a url no head-->
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudoutamanho()">
     <header>    
         <h1>Meu Site</h1>
-
-        <menu>
+        <span class="material-symbols-outlined" id="burguer" onclick="clicar()">menu</span> <!--2° Passo: Colar o span do ícone do google fonts no header-->
+        <menu id="menu">
             <ul>
                 <a href="#"><li>Opção 1</li></a>
                 <a href="#"><li>Opção 2</li></a>
@@ -39,5 +41,26 @@
             
         </article>
     </main>
+
+    <script>
+         var menu = window.document.getElementById('menu');
+        function clicar() { /*4° Passo: identificar a variável do menu e criar uma estrutura condicional, que se o menu estiver exibido e eu cliquei, ele esconde, senão ele apenas mostra o ícone*/
+        
+        if (menu.style.display == 'block') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
+        }
+        }
+
+        function mudoutamanho(){
+            
+            if (window.innerWidth >= '768px'){
+                menu.style.display = 'none'
+            } else{
+                menu.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>
